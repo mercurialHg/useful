@@ -9,7 +9,6 @@ var util = {
     mobileToggle: function ($container, $toggle, auto) {
         //auto [boolean] see if auto scroll is needed
         $container.on("click", $toggle, function () {
-            console.log(this)
             if (auto) {
                 var $window = $(window),
                     scroll = $window.scrollTop();
