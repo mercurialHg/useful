@@ -5,21 +5,24 @@
 */
 
 var util = {
+    options: {},
     mobileToggle: function ($container, $toggle, auto) {
+        //auto [boolean] see if auto scroll is needed
         $container.on("click", $toggle, function () {
+            console.log(this)
             if (auto) {
                 var $window = $(window),
                     scroll = $window.scrollTop();
-                $(this).toggleClass("js--mobile");
+                $container.toggleClass("js--mobile");
                 $window.scrollTop(scroll);
             } else {
-                $(this).toggleClass("js--mobile");
+                $container.toggleClass("js--mobile");
             }
         })
     },
     init: function () {
         var _ = this;
-        _.mobileToggle($(".page-container"), $(".header__toggle"), auto);
+        _.mobileToggle($("body"), ".header__toggle", true);
     }
 }
 
