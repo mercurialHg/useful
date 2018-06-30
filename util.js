@@ -19,7 +19,7 @@ var util = {
     },
     init: function () {
         var _ = this;
-        _.mobileToggle($(".layout, body"), $(".header__toggle"), auto);
+        _.mobileToggle($(".page-container"), $(".header__toggle"), auto);
     }
 }
 
